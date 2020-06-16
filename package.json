@@ -4,8 +4,9 @@
   "main": "src/server.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "npx ts-node-dev src/server.ts",
-    "migrations": "knex --knexfile knexfile.ts migrate:latest"
+    "dev": "npx ts-node-dev --ignore-watch node_modules src/server.ts",
+    "migrations": "knex --knexfile knexfile.ts migrate:latest",
+    "seeds": "knex --knexfile knexfile.ts seed:run"
   },
   "dependencies": {
     "express": "^4.17.1",
